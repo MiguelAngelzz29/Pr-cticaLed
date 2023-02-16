@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import es.cifpcarlos3.fxled.ShapeLed?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.cifpcarlos3.fxled.LedController">
+   <children>
+      <GridPane>
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="83.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="385.0" minWidth="10.0" prefWidth="385.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="233.0" minHeight="10.0" prefHeight="183.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="173.0" minHeight="10.0" prefHeight="97.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="174.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="67.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ToggleButton fx:id="btnEncender" mnemonicParsing="false" text="ON / OFF" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="150.0" />
+               </GridPane.margin>
+            </ToggleButton>
+            <ColorPicker fx:id="clrPickerLed" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ColorPicker fx:id="clrPickerShapeLed" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Color Led" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="150.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Color ShapeLed" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="150.0" />
+               </GridPane.margin>
+            </Label>
+            <ShapeLed fx:id="shapeLed" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</StackPane>
